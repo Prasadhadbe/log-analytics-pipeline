@@ -1,0 +1,43 @@
+{
+    "title": "Log Level Distribution",
+    "visState": {
+      "type": "pie",
+      "params": {
+        "addTooltip": true,
+        "addLegend": true,
+        "legendPosition": "right",
+        "isDonut": true,
+        "labels": {
+          "show": false,
+          "values": true,
+          "last_level": true,
+          "truncate": 100
+        }
+      },
+      "aggs": [
+        {
+          "id": "1",
+          "enabled": true,
+          "type": "count",
+          "schema": "metric",
+          "params": {}
+        },
+        {
+          "id": "2",
+          "enabled": true,
+          "type": "terms",
+          "schema": "segment",
+          "params": {
+            "field": "level.keyword",
+            "orderBy": "1",
+            "order": "desc",
+            "size": 5,
+            "otherBucket": false,
+            "otherBucketLabel": "Other",
+            "missingBucket": false,
+            "missingBucketLabel": "Missing"
+          }
+        }
+      ]
+    }
+  }
