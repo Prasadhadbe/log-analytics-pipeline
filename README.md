@@ -2,10 +2,6 @@
 
 A complete solution for processing, analyzing, and visualizing logs in real-time using Kafka, Spark, Elasticsearch, and Kibana.
 
-## Architecture
-
-![Architecture Diagram](docs/architecture.png)
-
 ## Prerequisites
 
 - Docker
